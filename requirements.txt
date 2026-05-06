@@ -1,0 +1,6 @@
+# Requirements for all of this hehe
+fastapi
+uvicorn
+python-dotenv
+groq
+streamlit

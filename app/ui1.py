@@ -1,6 +1,12 @@
 import streamlit as st
 import requests
 import time
+import os
+
+# from dotenv import load_dotenv
+# load_dotenv()
+
+API_BASE_URL = os.getenv("API_URL","http://localhost:8000")
 
 st.set_page_config(page_title = "Groq Photography Chatbot", page_icon=":camera:", layout="wide")
 st.title("Groq Photography Chatbot")
@@ -38,7 +44,7 @@ if prompt := st.chat_input("How can I help you today? Ask me anything about phot
     with st.chat_message("assistant"):
         try:
             # Point to localhost for now
-            res = requests.post("http://localhost:8000/chat", json={"message": prompt})
+            res = requests.post(f"{API_BASE_URL}/chat", json={"message": prompt})
             answer = res.json().get("response")
             st.markdown(answer)
 
