@@ -23,7 +23,7 @@ async def chat_with_groq(request: ChatRequest):
     try: 
         # Secure prompting using system role
         response = client.chat.completions.create(
-            model = 'llama3-8b-8192',
+            model = 'llama-3.3-70b-versatile',
             messages = [
                 {"role":"system", "content":"You are a professional assistant. Stay polite and concise, and only talk about anything related to photography."},
                 {"role":"user", "content":request.message}
