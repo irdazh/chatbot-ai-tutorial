@@ -22,7 +22,7 @@ for message in st.session_state.messages:
         st.markdown(message['content'])
 
 # User Input
-if prompt := st.chat_input("How can I help you today? Ask me anything about photography! To exit, just say 'bye'."):
+if prompt := st.chat_input("How can I help you today? To exit, just say 'Bye'."):
 
     # If input including bye, exit the chat
     if prompt.lower() in ["exit", "quit", 'bye']:
@@ -32,10 +32,10 @@ if prompt := st.chat_input("How can I help you today? Ask me anything about phot
             time.sleep(2) 
         st.rerun()  # Refresh the app to clear the UI
     
-    # Add user message to UI
+    # Add user message to local state
     st.session_state.messages.append(
         {"role": "user", "content":prompt}
-    )
+        )
 
     with st.chat_message("user"):
         st.markdown(prompt)
@@ -44,11 +44,12 @@ if prompt := st.chat_input("How can I help you today? Ask me anything about phot
     with st.chat_message("assistant"):
         try:
             # Point to localhost for now
-            res = requests.post(f"{API_BASE_URL}/chat", json={"message": prompt})
+            res = requests.post(f"{API_BASE_URL}/chat", 
+                                json={"history": st.session_state.messages})
             answer = res.json().get("response")
             st.markdown(answer)
 
-            # Add assistant message to UI
+            # Add assistant message to local state
             st.session_state.messages.append(
                 {"role": "assistant", "content": answer}
             )
