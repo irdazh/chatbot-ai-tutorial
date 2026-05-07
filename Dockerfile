@@ -15,7 +15,7 @@ COPY ./app /code/app
 EXPOSE 7860
 
 # We create a script to run the API on 8000 and Streamlit on 7860
-RUN echo "#!/bin/bash\nuvicorn main:app --host 0.0.0.0 --port 8000 &\nstreamlit run ui.py --server.port 7860 --server.address 0.0.0.0" > start.sh
+RUN echo "#!/bin/bash\nuvicorn app.main1:app --host 0.0.0.0 --port 8000 &\nstreamlit run app/ui1.py --server.port 7860 --server.address 0.0.0.0" > start.sh
 RUN chmod +x start.sh
 
 CMD ["./start.sh"]
