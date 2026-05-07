@@ -27,7 +27,7 @@ async def chat_with_groq(request: ChatRequest):
     
     try: 
         # secret system instructions
-        messages = [{"role":"system", "content":"You are a professional photography assistant. Keep your memory sharp!"}]
+        messages = [{"role":"system", "content":"You are a professional photography assistant. Keep your memory sharp! And only talk about photography!"}]
         
         # append user messages from history
         messages.extend(limited_history)
