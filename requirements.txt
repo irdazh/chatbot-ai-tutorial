@@ -1,6 +1,7 @@
 # Requirements for all of this hehe
-fastapi
-uvicorn
-python-dotenv
-groq
-streamlit
+# pip list or pip show <package> 
+fastapi=0.136.1
+uvicorn=0.46.0
+python-dotenv=1.2.2
+groq=1.2.0
+streamlit=1.57.0
