@@ -12,12 +12,16 @@ Oh. And another btw, I use groq model. Using FastAPI as the backend and streamli
     1. Backend Groq brain
     2. Connect to the Frontend UI using Streamlit
     3. Done I guess?
-3. Build the Dockerfile
+3. Build the (offline) Dockerfile
     1. Create --> Build --> `docker build -f Dockerfile.off -t chatbot-local .` --> help, it took a really long time LOL. --> I guess i try to copy all the files LOL including the .venv and whatsoever hahaha --> either use .dockerignore or just copy one inside the app folder. I guess those are enough.
     2. Run --> `docker run -p 8501:8501 -p 8000:8000 --env-file .env chatbot-local`
     2. Tag --> `docker tag <local-name> <uname>/<repo-name>:<tag>`
     3. Push --> `docker push <uname>/<repo-name>:<tag>`   
-    3. Download & Run
+    3. Download --> `docker pull (idem as above)`
+    4. Run --> `docker run -p 8501:8501 -p 8000:8000 -e GROQ_API_KEY=gsk_THEIR_ACTUAL_KEY <docker-name>`
+4. Shall we also build the online one? Hehe. 
+    1. Let's see what can we do
+    2. Cihuy. 
 
 
 ### Setting things up
