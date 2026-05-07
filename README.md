@@ -1,3 +1,15 @@
+---
+title: Chatbot Ai Tutorial
+emoji: 🐠
+colorFrom: indigo
+colorTo: green
+sdk: docker
+pinned: false
+---
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
+
 ## Chatbot AI
 
 Using OpeanAI API from this [youtube tutorial.](https://www.youtube.com/watch?v=q5HiD5PNuck)
