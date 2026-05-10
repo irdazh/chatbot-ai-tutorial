@@ -22,6 +22,7 @@ async def chat_with_groq(request: ChatRequest):
 
     # Safety check but. Hmm. IDK haha. 
     total_chars = sum(len(msg['content']) for msg in limited_history)
+    
     if total_chars > 5000:
         raise HTTPException(status_code=400, detail="Conversation context too large")
     

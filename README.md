@@ -1,6 +1,6 @@
 ---
-title: Chatbot Ai Tutorial
-emoji: 🐠
+title: Chatbot AI Tutorial
+emoji: 📸
 colorFrom: indigo
 colorTo: green
 sdk: docker
@@ -10,14 +10,62 @@ pinned: false
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
 
 
-## Chatbot AI
+# Chatbot AI
+
+![preview](/images/preview1.png)
 
 Using OpeanAI API from this [youtube tutorial.](https://www.youtube.com/watch?v=q5HiD5PNuck)
 Nah, I decided to just follow one from Gemini, and scrape things from the tutorial. Well, what can I do? 
 
-Oh. And another btw, I use groq model. Using FastAPI as the backend and streamlit for the UI yeay. Bye.
+Oh. And another btw, I used groq model since it's free. I also used FastAPI as the backend and streamlit for the UI. Then lastly, I deployed the app online via [Hugging Face Space](https://huggingface.co/spaces/irdazh/chatbot-ai)
 
-## Tutorial steps
+
+## Problem
+
+Imagine this situation (ofc, it's all a lie). A freshman in arts undergraduate school wanna learn more about photography. Since the booming of AI, why don't we utilize it to make a chatbot about photography thingies. 
+
+Well, I myself can't really opperate a camera. So, it might be useful as well for me, right (?)
+
+## Approach
+
+Here what I did
+1. Create a backend Groq brain with Llama model
+2. Connect to the frontend Streamlit UI
+3. Build an offline and online Dockerfile
+4. Online deployment using Hugging Face Space
+
+
+## Tools
+1. FastAPI
+2. Groq AI Service
+3. Llama Model
+4. Streamlit
+
+##  Results, Insights, Deployment
+
+Is there? Nope. So do skip these parts. 
+
+## Conclusion
+
+1. As I wrote in the previous Approach part, I learnt a lot about making a Chatbot AI application and hosting it via Hugging Face space. 
+2. I also learnt a proper (?) way to use backend and frontend thingies .... Oh, you know what? I don't actually know what am I talking about. LOL. 
+
+## Limitations & Future Work
+1. It's just a small demo
+2. There's no ML at all
+3. A very simple app, no part to save the inference or so... (we don't even need it, right?)
+
+As for future work... :
+
+1. Put the AI into a real app
+2. But seriously, what define a real app? 
+3. Not really, but I think that's that.
+
+--  
+
+## Misc.
+
+### Tutorial steps
 1. Installation
 2. Create Files
 2. Gemini and Copasting Code
