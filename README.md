@@ -61,7 +61,7 @@ As for future work... :
 2. But seriously, what define a real app? 
 3. Not really, but I think that's that.
 
---  
+<div align="center"> *** </div>
 
 ## Misc.
 
